@@ -2,6 +2,11 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+
+import { getFirestore } from 'firebase/firestore';
+console.log('getFirestore existe?', typeof getFirestore);
+
+
 import Login from './componentes/Login';
 import Home from './componentes/Home';
 import Registro from './componentes/Registro';
