@@ -45,7 +45,7 @@ const Login = ({ navigation }) => {
       <TextInput
         style={styles.input}
         placeholder="Senha"
-        secureTextEntry
+        secureTextEntry={true}
         value={password}
         onChangeText={setPassword}
       />

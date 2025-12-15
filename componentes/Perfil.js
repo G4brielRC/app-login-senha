@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, ActivityIndicator, TextInput, Button, Alert, Image } from 'react-native';
 import { auth } from './Firebase';
-import { getFirestore, doc, getDoc, updateDoc } from 'firebase/firestore';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { db } from './Firebase';
 
 const Perfil = () => {
   const [userData, setUserData] = useState(null);
@@ -9,7 +10,6 @@ const Perfil = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [name, setName] = useState('');
   const [bio, setBio] = useState('');
-  const db = getFirestore();
 
   useEffect(() => {
     const fetchUserData = async () => {
